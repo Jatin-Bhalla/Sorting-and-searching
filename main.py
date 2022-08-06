@@ -13,4 +13,26 @@ root.minsize("400x400")
 inpt= Label (text="input")
 inpt.pack()
 
-root.mainloop()  
+root.mainloop()
+
+def binary_search(arr , target):
+  #we input an array (list) and an int value to search through the list of numbers
+  #we give l as th left most value as 0 of the index
+  # r is the right most value in the list but because the indexing is from 0  and the list length does not start from 0 so teo
+  # even out the end value to match the indexing value which is n+1 we sub 1 from the right most value to match the index value
+  l=0
+  r=arr.length-1 
+  #len(arr)-1
+ # for the binary search we go to the middle most value of the list to check if target is there
+  while l<=r: m=(l+r)/2
+ # if that is the target we use its value as the output of the function
+  if arr[m]==target: return m
+ #otherwise
+# L--------M---------R
+# L<-----(T<M)---->M<------(T>M)---->R
+  if target<arr[m]:r=m-1
+    #L<------>r-M______R
+  else: l=m+1
+    #L_____M-l<----->R
+  return -1
+#IF NONE THEN RETURN
