@@ -15,6 +15,7 @@ inpt.pack()
 
 root.mainloop()
 #this is an iterative approach for linear search
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Linear_search(arr, x):
      for i in range(len(arr)):
          if arr[i] == x:
@@ -22,14 +23,16 @@ def Linear_search(arr, x):
           #return arr[i]
  
     return -1
-
+#----  ------ ------ ----- ----- ---- ----- ---- ---- ---- ---- ---- ----- ----- ----- ----- ----- ----- ----- ----- ---- ----- ---- ----- ----- ----- ---- ---- 
+""" # another linear search code:
 def linear_search(arr,n,t):
     for i in range (0,n):
         if(arr[i]==k):
             return i
             #returnarr[i]
     return -1
-  
+    """
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def binary_search(arr , target):
   #we input an array (list) and an int value to search through the list of numbers
   #we give l as th left most value as 0 of the index
@@ -51,3 +54,4 @@ def binary_search(arr , target):
     #L_____M-l<----->R
   return -1
 #IF NONE THEN RETURN
+#----------------------------------------------------------------------------------------------------------------------------------------------------------------
