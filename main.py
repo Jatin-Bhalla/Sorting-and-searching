@@ -10,10 +10,10 @@ root= Tk()
 # root.maxsize("10000x10000")
 #this will lock the max size so you can  not drag the box to increase its size
 #the same thing is applicable for minsize
-inpt= Label (text="input")
-inpt.pack()
+#inpt= Label (text="input")
+#inpt.pack()
 
-root.mainloop()
+#root.mainloop()
 #this is an iterative approach for linear search
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Linear_search(arr, x):
