@@ -1,20 +1,6 @@
 from tkinter import *
 #import tkinter
 root= Tk()
-#Basic GUI and root is made
-#GUI LOGIC
-#Width x height
-
-#root.geometry(" 4195x61681")
-#root.minsize("400x400")
-# root.maxsize("10000x10000")
-#this will lock the max size so you can  not drag the box to increase its size
-#the same thing is applicable for minsize
-#inpt= Label (text="input")
-#inpt.pack()
-
-#root.mainloop()
-#this is an iterative approach for linear search
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Linear_search(arr, x):
      for i in range(len(arr)):
@@ -69,3 +55,23 @@ def selectionSort(array, size):
          # swapping the elements to sort the array
         (array[ind], array[min_index]) = (array[min_index], array[ind])
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------
+def Submit(): pass
+def Delete():entry.delete(0,END)
+def Backspace():entry.delete(len(entry.get())-1 ,END)
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Basic GUI and root is made
+#GUI LOGIC
+#Width x height
+
+#root.geometry(" 4195x61681")
+#root.minsize("400x400")
+# root.maxsize("10000x10000")
+#this will lock the max size so you can  not drag the box to increase its size
+#the same thing is applicable for minsize
+#inpt= Label (text="input")
+#inpt.pack()
+
+#root.mainloop()
+#this is an iterative approach for linear search
+
