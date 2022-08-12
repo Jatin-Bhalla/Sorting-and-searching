@@ -60,18 +60,59 @@ def Submit(): pass
 def Delete():entry.delete(0,END)
 def Backspace():entry.delete(len(entry.get())-1 ,END)
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Basic GUI and root is made
-#GUI LOGIC
+#Basic GUI and window is made
+#change the size of the window
 #Width x height
 
-#root.geometry(" 4195x61681")
-#root.minsize("400x400")
-# root.maxsize("10000x10000")
+window.geometry(" 1024x 856")
+window.title("Algo Analyzr")
 #this will lock the max size so you can  not drag the box to increase its size
 #the same thing is applicable for minsize
-#inpt= Label (text="input")
-#inpt.pack()
+window.minsize("733x434")
+window.maxsize("10000x10000")
+#background colour
+window.config(background="")#enter a colour or a hex value
+#----------------
+# Entry widget =textbox to accept an input from the user
 
-#root.mainloop()
-#this is an iterative approach for linear search
+entry= Entry (window,font=("Arial",50))
+entry.pack(side=LEFT )
+# ------------------
+# BUTTONS= performs a specific funtion given by the command or linked using it
+backspace_button =Button(window,text='backspace',command = Backspace)
+backspace_button.pack(side=RIGHT)
 
+delete_button =Button(window,text='DELETE',command = Delete)
+delete_button.pack(side=RIGHT)
+
+submit_button =Button(window,text='SUBMIT',command = Submit)
+submit_button.pack(side=RIGHT)
+
+
+# -------------------
+#add an image to the project folder and link them
+icon = PhotoImage(file='logo.png')
+window.iconphoto(True,icon)
+#label is aarea holding image or text
+inpt= Label(window,
+            text="Input",
+            font=('Arial',16,'bold'),
+            fg='',""" text colour"""
+            bg=''  """colour of the baground behind text"""
+            )
+#https://www.color-hex.com/
+#colour value in hexadecimal
+inpt.pack()
+
+#button: click it and it does action
+button =Button.(window,
+                text="Input",
+                command =click,
+                font=("Arial",16,'bold'),
+                fg='',""" text colour"""
+                bg=''  """colour of the baground behind text""",
+                activeforeground="#00FF00",
+                activebackground="BLACK"
+                state =ACTIVE )
+button.pack()
+window.mainloop()  # this will place window on scree and also look for events in it
