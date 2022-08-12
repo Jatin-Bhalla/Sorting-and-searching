@@ -2,7 +2,7 @@ from tkinter import *
 #import tkinter
 root= Tk()
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Linear_search(arr, x):
+def Linear_Search(arr, x):
      for i in range(len(arr)):
          if arr[i] == x:
             return i
@@ -19,7 +19,7 @@ def linear_search(arr,n,t):
     return -1
     """
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
-def binary_search(arr , target):
+def Binary_Search(arr , target):
   #we input an array (list) and an int value to search through the list of numbers
   #we give l as th left most value as 0 of the index
   # r is the right most value in the list but because the indexing is from 0  and the list length does not start from 0 so teo
@@ -43,7 +43,7 @@ def binary_search(arr , target):
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # time complexity O(n*n)
 #sorting by finding min_index
-def selectionSort(array, size):
+def SelectionSort(array, size):
     
     for ind in range(size):
         min_index = ind
@@ -119,19 +119,19 @@ button.pack()
 #check buttons
 #probably add fg and bg colour and active foreground and active background
 
-linear_button = Checkbutton(window, text = "LINEAR", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+linear_button = Checkbutton(window, text = "LINEAR", variale ="x" , onvalue =1 , offvalue =0 , command=Linear_Search ,font =('Arial',15) ) 
 linear_button.pack(side=LEFT)
 
-binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command= Binary_Search,font =('Arial',15) ) 
 binary_button.pack(side=LEFT)
 
-quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command= Quick_Search,font =('Arial',15) ) 
 quick_button.pack(side=RIGHT)
 
-bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=Bubble_Search,font =('Arial',15) ) 
 bubble_button.pack(side=RIGHT)
 
-select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command= Selection_Sort,font =('Arial',15) ) 
 select_button.pack(side=RIGHT)
 #------------------------------------------------------------------------------------------------------------
 window.mainloop()  # this will place window on scree and also look for events in it
