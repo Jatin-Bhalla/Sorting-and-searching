@@ -55,6 +55,9 @@ def SelectionSort(array, size):
          # swapping the elements to sort the array
         (array[ind], array[min_index]) = (array[min_index], array[ind])
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
+def Bubble_Sort():pass
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------
+def Quick_Sort():pass
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Submit(): pass
 def Delete():entry.delete(0,END)
@@ -125,10 +128,10 @@ linear_button.pack(side=LEFT)
 binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command= Binary_Search,font =('Arial',15) ) 
 binary_button.pack(side=LEFT)
 
-quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command= Quick_Search,font =('Arial',15) ) 
+quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command= Quick_Sort,font =('Arial',15) ) 
 quick_button.pack(side=RIGHT)
 
-bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=Bubble_Search,font =('Arial',15) ) 
+bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=Bubble_Sort,font =('Arial',15) ) 
 bubble_button.pack(side=RIGHT)
 
 select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command= Selection_Sort,font =('Arial',15) ) 
