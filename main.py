@@ -115,4 +115,23 @@ button =Button.(window,
                 activebackground="BLACK"
                 state =ACTIVE )
 button.pack()
+#------------------------------------------------------------------------------------------------------------
+#check buttons
+#probably add fg and bg colour and active foreground and active background
+
+linear_button = Checkbutton(window, text = "LINEAR", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+linear_button.pack(side=LEFT)
+
+binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+binary_button.pack(side=LEFT)
+
+quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+quick_button.pack(side=RIGHT)
+
+bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+bubble_button.pack(side=RIGHT)
+
+select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command=,font =('Arial',15) ) 
+select_button.pack(side=RIGHT)
+#------------------------------------------------------------------------------------------------------------
 window.mainloop()  # this will place window on scree and also look for events in it
