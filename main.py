@@ -19,11 +19,11 @@ def linear_search(arr,n,t):
     return -1
     """
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Binary_Search(arr , target):
   #we input an array (list) and an int value to search through the list of numbers
   #we give l as th left most value as 0 of the index
   # r is the right most value in the list but because the indexing is from 0  and the list length does not start from 0 so teo
   # even out the end value to match the indexing value which is n+1 we sub 1 from the right most value to match the index value
+def Binary_Search(arr , target):
   l=0
   r=arr.length-1 
   #len(arr)-1
@@ -43,13 +43,17 @@ def Binary_Search(arr , target):
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # time complexity O(n*n)
 #sorting by finding min_index
-
+#The basic thing about selection sort is to look at 2 consecutive values and then compare for which is bigger or smaller
+#if asc: it sees 2 values compares and then tells which is smaller and swaps it with the bigger value then the same loop continues till the value it is sorted
+# if the value is smaller then it compares it with the next value all the same while identifying it as minimum
 def SelectionSort(array, size):
-    #size of the array
+    #array name , size of the array
     for value in range(size):
+          #usually the first value is pointed min
         min_index = value
  
         for j in range(value + 1, size):
+          # value+1 is used cuz in loops iteration the value needs to exceed till the point it is equal to size for termination of the loop
             # select the minimum element in every iteration
             # Ascending order :   >
             # Descending order:   <      
@@ -57,6 +61,8 @@ def SelectionSort(array, size):
                 min_index = j
          # swapping the elements to sort the array
         (array[value], array[min_index]) = (array[min_index], array[value])
+          #this is a basic swap code piece(x,y)=(y,x) 
+          #the akshay kumar meme
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Bubble_Sort():pass
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
