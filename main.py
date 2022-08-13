@@ -65,11 +65,11 @@ def SelectionSort(array, size):
           #the akshay kumar meme
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Bubble_Sort(array):
-        
-  # loop to access each array element
+  #instead of n or another variable with len(array) we directly use it
+  # honestly it is less confusing when you read code
+  # loop to access each array element # loop for the iteration .... n elements
   for i in range(len(array)):
-
-    # loop to compare array elements
+    # loop to compare array elements ...n-1-i comparisons for where i slowly equals n-1
     for j in range(0, len(array) - i - 1):
 
       # compare two adjacent elements
@@ -78,9 +78,7 @@ def Bubble_Sort(array):
 
         # swapping elements if elements
         # are not in the intended order
-        temp = array[j]
-        array[j] = array[j+1]
-        array[j+1] = temp
+        (array[j] , array[j + 1])=(array[j + 1],array[j])
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
