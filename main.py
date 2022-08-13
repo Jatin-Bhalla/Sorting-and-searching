@@ -43,17 +43,20 @@ def Binary_Search(arr , target):
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 # time complexity O(n*n)
 #sorting by finding min_index
+
 def SelectionSort(array, size):
-    
-    for ind in range(size):
-        min_index = ind
+    #size of the array
+    for value in range(size):
+        min_index = value
  
-        for j in range(ind + 1, size):
+        for j in range(value + 1, size):
             # select the minimum element in every iteration
+            # Ascending order :   >
+            # Descending order:   <      
             if array[j] < array[min_index]:
                 min_index = j
          # swapping the elements to sort the array
-        (array[ind], array[min_index]) = (array[min_index], array[ind])
+        (array[value], array[min_index]) = (array[min_index], array[value])
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Bubble_Sort():pass
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
