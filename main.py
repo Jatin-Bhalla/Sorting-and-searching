@@ -1,6 +1,6 @@
 from tkinter import *
 #import tkinter
-root= Tk()
+window= Tk()
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Linear_Search(arr, x):
      for i in range(len(arr)):
@@ -169,4 +169,4 @@ bubble_button.pack(side=RIGHT)
 select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command= Selection_Sort,font =('Arial',15) ) 
 select_button.pack(side=RIGHT)
 #------------------------------------------------------------------------------------------------------------
-window.mainloop()  # this will place window on scree and also look for events in it
+window.mainloop()  # this will place window on screen and also look for events in it
