@@ -82,7 +82,14 @@ def Bubble_Sort(array):
 
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Quick_Sort():pass
+def Quick_Sort():
+     # well think of quick aort a bit like divide and conquer ! well conquer the problem
+     #break the array into 2 sub arrays and a centre 'pivot' 
+      # one array is consisting of values>pivot
+      # another has values < pivot
+  
+# now call the same funciton to  do the same  on both and further and further till a sorted array forms.
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 def Submit(): pass
 def Delete():entry.delete(0,END)
