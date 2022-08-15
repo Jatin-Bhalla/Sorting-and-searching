@@ -2,7 +2,7 @@ from tkinter import *
 #import tkinter
 window= Tk()
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Linear_Search(arr, x):
+def linear_search(arr, x):
      for i in range(len(arr)):
          if arr[i] == x:
             return i
@@ -23,7 +23,7 @@ def linear_search(arr,n,t):
   #we give l as th left most value as 0 of the index
   # r is the right most value in the list but because the indexing is from 0  and the list length does not start from 0 so teo
   # even out the end value to match the indexing value which is n+1 we sub 1 from the right most value to match the index value
-def Binary_Search(arr , target):
+def binary_search(arr , target):
   l=0
   r=arr.length-1 
   #len(arr)-1
@@ -46,7 +46,7 @@ def Binary_Search(arr , target):
 #The basic thing about selection sort is to look at 2 consecutive values and then compare for which is bigger or smaller
 #if asc: it sees 2 values compares and then tells which is smaller and swaps it with the bigger value then the same loop continues till the value it is sorted
 # if the value is smaller then it compares it with the next value all the same while identifying it as minimum
-def SelectionSort(array, size):
+def selection_sort(array, size):
     #array name , size of the array
     for value in range(size):
           #usually the first value is pointed min
@@ -64,7 +64,7 @@ def SelectionSort(array, size):
           #this is a basic swap code piece(x,y)=(y,x) 
           #the akshay kumar meme
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Bubble_Sort(array):
+def bubble_sort(array):
   #instead of n or another variable with len(array) we directly use it
   # honestly it is less confusing when you read code
   # loop to access each array element # loop for the iteration .... n elements
@@ -105,7 +105,7 @@ def partition(array, l, r):
   # return the position from where partition is done
   return i + 1
    
-def Quick_Sort(array , l ,r):
+def quick_sort(array , l ,r):
      if  l>=r:return 
      p=partition(array ,l,r)
      Quick_Sort(array ,l,p-1)
@@ -118,9 +118,11 @@ def Quick_Sort(array , l ,r):
 # now call the same funciton to  do the same  on both and further and further till a sorted array forms.
 #there will be 2 functions used here
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
-def Submit(): pass
-def Delete():entry.delete(0,END)
-def Backspace():entry.delete(len(entry.get())-1 ,END)
+def asc(): pass
+def desc(): pass
+def submit(): pass
+def delete():entry.delete(0,END)
+def backspace():entry.delete(len(entry.get())-1 ,END)
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Basic GUI and window is made
 #change the size of the window
@@ -141,13 +143,13 @@ entry= Entry (window,font=("Arial",50))
 entry.pack(side=LEFT )
 # ------------------
 # BUTTONS= performs a specific funtion given by the command or linked using it
-backspace_button =Button(window,text='backspace',command = Backspace)
+backspace_button =Button(window,text='backspace',command = backspace)
 backspace_button.pack(side=RIGHT)
 
-delete_button =Button(window,text='DELETE',command = Delete)
+delete_button =Button(window,text='DELETE',command =delete)
 delete_button.pack(side=RIGHT)
 
-submit_button =Button(window,text='SUBMIT',command = Submit)
+submit_button =Button(window,text='SUBMIT',command = submit)
 submit_button.pack(side=RIGHT)
 
 
@@ -181,19 +183,19 @@ button.pack()
 #check buttons
 #probably add fg and bg colour and active foreground and active background
 
-linear_button = Checkbutton(window, text = "LINEAR", variale ="x" , onvalue =1 , offvalue =0 , command=Linear_Search ,font =('Arial',15) ) 
+linear_button = Checkbutton(window, text = "LINEAR", variale ="x" , onvalue =1 , offvalue =0 , command=linear_search ,font =('Arial',15) ) 
 linear_button.pack(side=LEFT)
 
-binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command= Binary_Search,font =('Arial',15) ) 
+binary_button = Checkbutton(window, text = "BINARY", variale ="X" , onvalue =1 , offvalue =0 , command= binary_search,font =('Arial',15) ) 
 binary_button.pack(side=LEFT)
 
-quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command= Quick_Sort,font =('Arial',15) ) 
+quick_button = Checkbutton(window, text = "QUICK", variale ="x" , onvalue =1 , offvalue =0 , command= quick_sort,font =('Arial',15) ) 
 quick_button.pack(side=RIGHT)
 
-bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=Bubble_Sort,font =('Arial',15) ) 
+bubble_button = Checkbutton(window, text = "BUBBLE", variale ="x" , onvalue =1 , offvalue =0 , command=bubble_sort,font =('Arial',15) ) 
 bubble_button.pack(side=RIGHT)
 
-select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command= Selection_Sort,font =('Arial',15) ) 
+select_button = Checkbutton(window, text = "SELECT", variale ="x" , onvalue =1 , offvalue =0 , command= selection_sort,font =('Arial',15) ) 
 select_button.pack(side=RIGHT)
 #------------------------------------------------------------------------------------------------------------
 window.mainloop()  # this will place window on screen and also look for events in it
