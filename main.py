@@ -118,6 +118,32 @@ def quick_sort(array , l ,r):
 # now call the same funciton to  do the same  on both and further and further till a sorted array forms.
 #there will be 2 functions used here
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------
+def display_1():
+    # .get is used to obtain the current value
+    # of entry_1 widget (This is always a string)
+    print(entry_1.get())
+
+def display_2():
+    num = entry_2.get()
+    # Try convert a str to int
+    # If unable eg. int('hello') or int('5.5')
+    # then show an error.
+    try:
+       num = int(num)
+    # ValueError is the type of error expected from this conversion
+    except ValueError:
+        #Display Error Window (Title, Prompt)
+        showerror('Non-Int Error', 'Please enter an integer')
+    else:
+        print(num)
+
+def display_3():
+    # Ask Integer Window (Title, Prompt)
+    # Returned value is an int
+    ans = askinteger('Enter Integer', 'Please enter an integer')
+    # If the user clicks cancel, None is returned
+    if ans is not None:
+        print(ans)
 def asc(): pass
 def desc(): pass
 def submit(): pass
@@ -142,6 +168,24 @@ window.config(background="")#enter a colour or a hex value
 entry= Entry (window,font=("Arial",50))
 entry.pack(side=LEFT )
 # ------------------
+entry_1 = tk.Entry(window)
+btn_1 = tk.Button(window, text = "Display Text", command = display_1)
+
+entry_2 = tk.Entry(window)
+btn_2 = tk.Button(window, text = "Display Integer", command = display_2)
+
+btn_3 = tk.Button(window, text = "Enter Integer", command = display_3)
+
+# Grid is used to add the widgets to window
+# Alternatives are Pack and Place
+entry_1.grid(row = 0, column = 0)
+btn_1.grid(row = 1, column = 0)
+entry_2.grid(row = 0, column = 1)
+btn_2.grid(row = 1, column = 1)
+
+btn_3.grid(row = 2, column = 0)
+btn_4.grid(row = 2, column = 1)
+#-------------------
 # BUTTONS= performs a specific funtion given by the command or linked using it
 backspace_button =Button(window,text='backspace',command = backspace)
 backspace_button.pack(side=RIGHT)
