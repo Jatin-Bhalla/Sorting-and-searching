@@ -154,12 +154,12 @@ def backspace():entry.delete(len(entry.get())-1 ,END)
 #change the size of the window
 #Width x height
 
-window.geometry(" 1024x 856")
+window.geometry("1024x856")
 window.title("Algo Analyzr")
 #this will lock the max size so you can  not drag the box to increase its size
 #the same thing is applicable for minsize
-window.minsize("733x434")
-window.maxsize("10000x10000")
+window.minsize(600,500)
+window.maxsize(10000,10000)
 #background colour
 window.config(background="")#enter a colour or a hex value
 #----------------
