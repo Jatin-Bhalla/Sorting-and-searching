@@ -186,7 +186,7 @@ delete_query_button.grid( row=5, column=4)
 
 query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
 query_button.grid(row=5, column=5)
-# --------------------
+
 # ------------------------------------------------------------------------------------------------------------------------
 #Radio buttons : used so user can select only one option
 
