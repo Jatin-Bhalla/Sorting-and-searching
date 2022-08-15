@@ -1,16 +1,16 @@
 from tkinter import *
-#import tkinter
-window = Tk() 
+
+window = Tk()
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BASIC functions
 def asc():pass
 def desc():pass
-def submit(): pass
+def submit():pass
 def submit_query():pass
-def delete():entry.delete(0,END)
-def backspace():entry.delete(len(entry.get())-1 ,END)
-def delete_exit():Exit.delete(0,END)
-def delete_query():entry.delete(0,END)
+def delete():inptt.delete(0,END)
+def backspace():inptt.delete(len(entry.get())-1 ,END)
+def delete_exit():outptt.delete(0,END)
+def delete_query():query.delete(0,END)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # DSA funcitons
 def linear_search(arr, x):
@@ -120,58 +120,81 @@ def quick_sort(array , l ,r):
 #there will be 2 functions used here
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-window.geometry("1200x800")
-window.title("Algo Analyzr")
-
-#this will lock the max size so you can  not drag the box to increase its size
-#the same thing is applicable for minsize
-window.minsize(600,600)
-window.maxsize(10000,10000)
-window.config(background="#D8DFEE")
-# ----------
-#icon image
+#add an image to the project folder and link them
 icon = PhotoImage(file='logo.png')
 window.iconphoto(True,icon)
-# ------------------
-#  INNPUT OR OUTPUT DISPLAY
-# LABEL = text on GUI
-# BUTTONS= performs a specific funtion given by the command or linked using it
-# ------------------
-#enter input
-inptt= Label(window,text = "INPUT" ,font=('Arial',18,'bold'), bg ="#D8DFEE" , fg="#647295")
-inptt.pack(side= LEFT,anchor ="nw")
-entry= Entry (window,font=("Arial",18),bg="#A3B4CB",fg="#F4F2F3")
-entry.pack( side= LEFT ,anchor ="nw")
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+window.geometry("644x344")
+window.title("Algo Analyzr")
+Label(window, text="Search and Sort", font="comicsansms 13 bold", pady=15).grid(row=0, column=3)
+
+#Text for our form
+inptt = Label(window, text="INPUT ")
+outptt= Label(window, text="ENTER QUERY")
+query = Label(window, text="OUTPUT")
+# time_taken= Label(window, text="TIME TAKEN")
+# complexity = Label(window, text="O()")
+
+#Pack text for our form
+inptt.grid(row=1, column=2)
+outptt.grid(row=2, column=2)
+query.grid(row=3, column=2)
+# time_taken.grid(row=4, column=2)
+# comparisons.grid(row=5, column=2)
+
+# Tkinter variable for storing entries
+inpttvalue = IntVar()
+outpttvalue = IntVar()
+queryvalue = IntVar()
+# time_takenvalue = DoubleVar()
+# complexityevalue = StringVar()
+inputtbackspace = StringVar()
+inputtdelete = StringVar()
+inputtsubmit = StringVar()
+exitdelete = StringVar()
+querydelete = StringVar()
+querysubmit = StringVar()
+
+
+
+#Entries for our form
+inpttentry = Entry(window, textvariable=inpttvalue)
+outpttentry = Entry(window, textvariable=outpttvalue)
+queryentry = Entry(window, textvariable=queryvalue)
+# time_takenentry = Entry(window, textvariable=time_takenvalue)
+# complexityentry = Entry(window, textvariable=complexityevalue)
+
+# Packing the Entries
+inpttentry.grid(row=1, column=3)
+outpttentry.grid(row=2, column=3)
+queryentry.grid(row=3, column=3)
+# time_takenentry.grid(row=4, column=3)
+#  complexityentry.grid(row=5, column=3)
+
+#Checkbox & Packing
+
 backspace_button =Button(window,text='BACKSPACE',command = backspace,bg ="#F2E9EB",fg="#647295")
-backspace_button.pack( side= RIGHT,anchor ="ne")
+backspace_button.grid( row=6, column=3)
 
 delete_button =Button(window,text='DELETE',command = delete, bg ="#F2E9EB",fg="#647295")
-delete_button.pack( side= RIGHT, anchor ="ne")
+delete_button.grid( row=6, column=6)
 
 submit_button =Button(window,text='SUBMIT',command = submit, bg ="#F2E9EB",fg="#647295")
-submit_button.pack( side= RIGHT,anchor ="ne")
-# --------------------
-#Query input
-query_= Label(window,text = "INPUT QUERY" ,font=('Arial',18,'bold'), bg ="#D8DFEE" , fg="#647295")
-query_.pack(side= LEFT ,anchor ="e")
-query_search= Entry (window,font=("Arial",18),bg="#A3B4CB",fg="#F4F2F3")
-query_search.pack(side= LEFT ,anchor ="e")
-delete_exit_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#647295")
-delete_exit_button.pack( side= RIGHT, anchor ="e")
-query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
-query_button.pack(side=LEFT, anchor ="e")
+submit_button.grid(row=6, column=9)
 
-# --------------------
-# Exit output
-outptt= Label(window,text = "OUTPUT" ,font=('Arial',18,'bold'), bg ="#D8DFEE",fg="#647295")
-outptt.pack(side= LEFT,anchor ="se")
-Exit= Entry (window,font=("Arial",18),bg="#A3B4CB",fg="#F4F2F3")
-Exit.pack(side= LEFT,anchor ="se")
 delete_exit_button =Button(window,text='DELETE',command = delete_exit, bg ="#F2E9EB",fg="#647295")
-delete_exit_button.pack( side= LEFT, anchor ="se")
-# --------------------
-#frames 
-f1=Frame(window)
+delete_exit_button.grid( row=7, column=3)
 
-# ------------
+delete_query_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#647295")
+delete_query_button.grid( row=7, column=6)
+
+query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
+query_button.grid(row=7, column=9)
+# --------------------
+#Button & packing it and assigning it a command
+# Button(text="Submit to Harry Travels", ).grid(row=7, column=3)
+
+
+
 window.mainloop()
