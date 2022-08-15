@@ -161,7 +161,7 @@ window.title("Algo Analyzr")
 window.minsize(600,500)
 window.maxsize(10000,10000)
 #background colour
-window.config(background="")#enter a colour or a hex value
+window.config(background="#C0A9BD")#enter a colour or a hex value
 #----------------
 # Entry widget =textbox to accept an input from the user
 
