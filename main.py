@@ -119,82 +119,95 @@ def quick_sort(array , l ,r):
  # now call the same funciton to  do the same  on both and further and further till a sorted array forms.
 #there will be 2 functions used here
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 #add an image to the project folder and link them
 icon = PhotoImage(file='logo.png')
 window.iconphoto(True,icon)
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 window.geometry("644x344")
+window.minsize(600,300)
+window.maxsize(1000,800)
+window.config(background="#D8DFEE")
 window.title("Algo Analyzr")
-Label(window, text="Search and Sort", font="comicsansms 13 bold", pady=15).grid(row=0, column=3)
+Label(window, text="SEARCHING AND SORTING", font="comicsansms 13 bold", pady=15,bg ="#D8DFEE",fg="#647295").grid(row=0, column=3)
 
-#Text for our form
-inptt = Label(window, text="INPUT ")
-outptt= Label(window, text="ENTER QUERY")
-query = Label(window, text="OUTPUT")
+#Text that is displayed
+inptt = Label(window, text="INPUT ", bg ="#D8DFEE",fg="#647295")
+outptt= Label(window, text="ENTER QUERY", bg ="#D8DFEE",fg="#647295")
+query = Label(window, text="OUTPUT", bg ="#D8DFEE",fg="#647295")
 # time_taken= Label(window, text="TIME TAKEN")
 # complexity = Label(window, text="O()")
 
-#Pack text for our form
+#Pack text 
 inptt.grid(row=1, column=2)
-outptt.grid(row=2, column=2)
-query.grid(row=3, column=2)
+outptt.grid(row=5, column=2)
+query.grid(row=6, column=2)
 # time_taken.grid(row=4, column=2)
 # comparisons.grid(row=5, column=2)
 
-# Tkinter variable for storing entries
+# variable for storing entries
 inpttvalue = IntVar()
 outpttvalue = IntVar()
 queryvalue = IntVar()
 # time_takenvalue = DoubleVar()
 # complexityevalue = StringVar()
-inputtbackspace = StringVar()
-inputtdelete = StringVar()
-inputtsubmit = StringVar()
-exitdelete = StringVar()
-querydelete = StringVar()
-querysubmit = StringVar()
 
 
-
-#Entries for our form
-inpttentry = Entry(window, textvariable=inpttvalue)
-outpttentry = Entry(window, textvariable=outpttvalue)
-queryentry = Entry(window, textvariable=queryvalue)
+#Entries 
+inpttentry = Entry(window, textvariable=inpttvalue,bg="#A3B4CB",fg="#F4F2F3")
+outpttentry = Entry(window, textvariable=outpttvalue,bg="#A3B4CB",fg="#F4F2F3")
+queryentry = Entry(window, textvariable=queryvalue,bg="#A3B4CB",fg="#F4F2F3")
 # time_takenentry = Entry(window, textvariable=time_takenvalue)
 # complexityentry = Entry(window, textvariable=complexityevalue)
 
 # Packing the Entries
 inpttentry.grid(row=1, column=3)
-outpttentry.grid(row=2, column=3)
-queryentry.grid(row=3, column=3)
+outpttentry.grid(row=5, column=3)
+queryentry.grid(row=6, column=3)
 # time_takenentry.grid(row=4, column=3)
 #  complexityentry.grid(row=5, column=3)
 
-#Checkbox & Packing
+#Radio & Packing
 
 backspace_button =Button(window,text='BACKSPACE',command = backspace,bg ="#F2E9EB",fg="#647295")
-backspace_button.grid( row=6, column=3)
+backspace_button.grid( row=1, column=4)
 
 delete_button =Button(window,text='DELETE',command = delete, bg ="#F2E9EB",fg="#647295")
-delete_button.grid( row=6, column=6)
+delete_button.grid( row=1, column=5)
 
 submit_button =Button(window,text='SUBMIT',command = submit, bg ="#F2E9EB",fg="#647295")
-submit_button.grid(row=6, column=9)
+submit_button.grid(row=1, column=6)
 
 delete_exit_button =Button(window,text='DELETE',command = delete_exit, bg ="#F2E9EB",fg="#647295")
-delete_exit_button.grid( row=7, column=3)
+delete_exit_button.grid( row=6, column=4)
 
 delete_query_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#647295")
-delete_query_button.grid( row=7, column=6)
+delete_query_button.grid( row=5, column=4)
 
 query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
-query_button.grid(row=7, column=9)
+query_button.grid(row=5, column=5)
 # --------------------
-#Button & packing it and assigning it a command
-# Button(text="Submit to Harry Travels", ).grid(row=7, column=3)
+# ------------------------------------------------------------------------------------------------------------------------
+#Radio buttons : used so user can select only one option
 
+linear_button = Radiobutton(window, text = "LINEAR",   command=linear_search , font="comicsansms 8 ",bg ="#F2E9EB",fg="#647295" ) 
+#probably add fg and bg colour and active foreground and active background
+linear_button.grid(row=8, column=2)
+binary_button = Radiobutton(window, text = "BINARY",   command= binary_search, font="comicsansms 8" ,bg ="#F2E9EB",fg="#647295") 
+#probably add fg and bg colour and active foreground and active background
+binary_button.grid(row=9, column=2)
 
+quick_button = Radiobutton(window, text = "QUICK",   command=bubble_sort , font="comicsansms 8 ",bg ="#F2E9EB",fg="#647295", ) 
+#probably add fg and bg colour and active foreground and active background
+quick_button.grid(row=8, column=6)
 
+bubble_button = Radiobutton(window, text = "BUBBLE",   command=quick_sort , font="comicsansms 8 " ,bg ="#F2E9EB",fg="#647295") 
+#probably add fg and bg colour and active foreground and active background
+bubble_button.grid(row=9, column=6)
+
+select_button = Radiobutton(window, text = "SELECT",   command=selection_sort, font="comicsansms 8 " ,bg ="#F2E9EB",fg="#647295") 
+#probably add fg and bg colour and active foreground and active background
+select_button.grid(row=10, column=6)
+# --------------------------------------------------------------------------------------------------------------------------
 window.mainloop()
+#variale ="x" , onvalue =1 , offvalue =0  ,
