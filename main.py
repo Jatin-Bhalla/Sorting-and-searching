@@ -8,7 +8,7 @@ def desc():pass
 def submit():pass
 def submit_query():pass
 def delete():inptt.delete(0,END)
-def backspace():inptt.delete(len(entry.get())-1 ,END)
+def backspace():inptt.delete(len(inptt.get())-1 ,END)
 def delete_exit():outptt.delete(0,END)
 def delete_query():query.delete(0,END)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -147,8 +147,11 @@ query.grid(row=6, column=2)
 
 # variable for storing entries
 inpttvalue = IntVar()
+inpttvalue.set("")
 outpttvalue = IntVar()
+outpttvalue.set("")
 queryvalue = IntVar()
+queryvalue.set("")
 # time_takenvalue = DoubleVar()
 # complexityevalue = StringVar()
 
@@ -186,7 +189,7 @@ delete_query_button.grid( row=5, column=4)
 
 query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
 query_button.grid(row=5, column=5)
-
+# --------------------
 # ------------------------------------------------------------------------------------------------------------------------
 #Radio buttons : used so user can select only one option
 
@@ -209,5 +212,6 @@ select_button = Radiobutton(window, text = "SELECT",   command=selection_sort, f
 #probably add fg and bg colour and active foreground and active background
 select_button.grid(row=10, column=6)
 # --------------------------------------------------------------------------------------------------------------------------
+
 window.mainloop()
 #variale ="x" , onvalue =1 , offvalue =0  ,
