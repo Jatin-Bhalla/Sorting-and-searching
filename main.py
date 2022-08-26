@@ -125,8 +125,8 @@ window.iconphoto(True,icon)
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 window.geometry("644x344")
-window.minsize(600,300)
 window.maxsize(1000,800)
+window.minsize(600,300)
 window.config(background="#D8DFEE")
 window.title("Algo Analyzr")
 Label(window, text="SEARCHING AND SORTING", font="comicsansms 13 bold", pady=15,bg ="#D8DFEE",fg="#647295").grid(row=0, column=3)
