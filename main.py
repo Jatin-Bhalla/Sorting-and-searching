@@ -129,12 +129,12 @@ window.maxsize(1000,800)
 window.minsize(600,300)
 window.config(background="#D8DFEE")
 window.title("Algo Analyzr")
-Label(window, text="SEARCHING AND SORTING", font="comicsansms 13 bold", pady=15,bg ="#D8DFEE",fg="#647295").grid(row=0, column=3)
+Label(window, text="SEARCHING AND SORTING", font="comicsansms 13 bold", pady=15,bg ="#D8DFEE",fg="#000000").grid(row=0, column=3)
 
 #Text that is displayed
-inptt = Label(window, text="INPUT ", bg ="#D8DFEE",fg="#647295")
-outptt= Label(window, text="ENTER QUERY", bg ="#D8DFEE",fg="#647295")
-query = Label(window, text="OUTPUT", bg ="#D8DFEE",fg="#647295")
+inptt = Label(window, text="INPUT ", bg ="#D8DFEE",fg="#000000")
+outptt= Label(window, text="ENTER QUERY", bg ="#D8DFEE",fg="#000000")
+query = Label(window, text="OUTPUT", bg ="#D8DFEE",fg="#000000")
 # time_taken= Label(window, text="TIME TAKEN")
 # complexity = Label(window, text="O()")
 
@@ -157,9 +157,9 @@ queryvalue.set("")
 
 
 #Entries 
-inpttentry = Entry(window, textvariable=inpttvalue,bg="#A3B4CB",fg="#F4F2F3")
-outpttentry = Entry(window, textvariable=outpttvalue,bg="#A3B4CB",fg="#F4F2F3")
-queryentry = Entry(window, textvariable=queryvalue,bg="#A3B4CB",fg="#F4F2F3")
+inpttentry = Entry(window, textvariable=inpttvalue,bg="#A3B4CB",fg="#000000")
+outpttentry = Entry(window, textvariable=outpttvalue,bg="#A3B4CB",fg="#000000")
+queryentry = Entry(window, textvariable=queryvalue,bg="#A3B4CB",fg="#000000")
 # time_takenentry = Entry(window, textvariable=time_takenvalue)
 # complexityentry = Entry(window, textvariable=complexityevalue)
 
@@ -172,43 +172,43 @@ queryentry.grid(row=6, column=3)
 
 #Radio & Packing
 
-backspace_button =Button(window,text='BACKSPACE',command = backspace,bg ="#F2E9EB",fg="#647295")
+backspace_button =Button(window,text='BACKSPACE',command = backspace,bg ="#F2E9EB",fg="#000000")
 backspace_button.grid( row=1, column=4)
 
-delete_button =Button(window,text='DELETE',command = delete, bg ="#F2E9EB",fg="#647295")
+delete_button =Button(window,text='DELETE',command = delete, bg ="#F2E9EB",fg="#000000")
 delete_button.grid( row=1, column=5)
 
-submit_button =Button(window,text='SUBMIT',command = submit, bg ="#F2E9EB",fg="#647295")
+submit_button =Button(window,text='SUBMIT',command = submit, bg ="#F2E9EB",fg="#000000")
 submit_button.grid(row=1, column=6)
 
-delete_exit_button =Button(window,text='DELETE',command = delete_exit, bg ="#F2E9EB",fg="#647295")
+delete_exit_button =Button(window,text='DELETE',command = delete_exit, bg ="#F2E9EB",fg="#000000")
 delete_exit_button.grid( row=6, column=4)
 
-delete_query_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#647295")
+delete_query_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#000000")
 delete_query_button.grid( row=5, column=4)
 
-query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
+query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#000000")
 query_button.grid(row=5, column=5)
 # --------------------
 # ------------------------------------------------------------------------------------------------------------------------
 #Radio buttons : used so user can select only one option
 
-linear_button = Radiobutton(window, text = "LINEAR",   command=linear_search , font="comicsansms 8 ",bg ="#F2E9EB",fg="#647295" ) 
+linear_button = Radiobutton(window, text = "LINEAR",   command=linear_search , font="comicsansms 8 ",bg ="#F2E9EB",fg="#000000" ) 
 #probably add fg and bg colour and active foreground and active background
 linear_button.grid(row=8, column=2)
-binary_button = Radiobutton(window, text = "BINARY",   command= binary_search, font="comicsansms 8" ,bg ="#F2E9EB",fg="#647295") 
+binary_button = Radiobutton(window, text = "BINARY",   command= binary_search, font="comicsansms 8" ,bg ="#F2E9EB",fg="#000000") 
 #probably add fg and bg colour and active foreground and active background
 binary_button.grid(row=9, column=2)
 
-quick_button = Radiobutton(window, text = "QUICK",   command=bubble_sort , font="comicsansms 8 ",bg ="#F2E9EB",fg="#647295", ) 
+quick_button = Radiobutton(window, text = "QUICK",   command=bubble_sort , font="comicsansms 8 ",bg ="#F2E9EB",fg="#000000", ) 
 #probably add fg and bg colour and active foreground and active background
 quick_button.grid(row=8, column=6)
 
-bubble_button = Radiobutton(window, text = "BUBBLE",   command=quick_sort , font="comicsansms 8 " ,bg ="#F2E9EB",fg="#647295") 
+bubble_button = Radiobutton(window, text = "BUBBLE",   command=quick_sort , font="comicsansms 8 " ,bg ="#F2E9EB",fg="#000000") 
 #probably add fg and bg colour and active foreground and active background
 bubble_button.grid(row=9, column=6)
 
-select_button = Radiobutton(window, text = "SELECT",   command=selection_sort, font="comicsansms 8 " ,bg ="#F2E9EB",fg="#647295") 
+select_button = Radiobutton(window, text = "SELECT",   command=selection_sort, font="comicsansms 8 " ,bg ="#F2E9EB",fg="#000000") 
 #probably add fg and bg colour and active foreground and active background
 select_button.grid(row=10, column=6)
 # --------------------------------------------------------------------------------------------------------------------------
