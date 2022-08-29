@@ -3,22 +3,24 @@ from tkinter import *
 window = Tk()
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BASIC functions
-def asc():pass
-def desc():pass
-def submit():pass
-def submit_query():pass
-def delete():inptt.delete(0,END)
-def backspace():inptt.delete(len(inptt.get())-1 ,END)
-def delete_exit():outptt.delete(0,END)
-def delete_query():query.delete(0,END)
+def submit():
+  val = inpttentry.get()   
+  array = [int(item) for item in val.split()]
+  return array
+def submit_query():
+  =query.get
+def delete():inpttentry.delete(0,END)
+def backspace():inpttentry.delete(len(inpttentry.get())-1 ,END)
+def delete_exit():outpttentry.delete(0,END)
+def delete_query():queryentry.delete(0,END)
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # DSA funcitons
-def linear_search(arr, x):
-    for i in range(len(arr)):
-         if arr[i] == x:
+def linear_search(target,array):
+    for i in range(len(array)):
+         if array[i] == target:
             return i
           #return arr[i]
-    return -1
+    return  getPosition(target)
 #----  ------ ------ ----- ----- ---- ----- ---- ---- ---- ---- ---- ----- ----- ----- ----- ----- ----- ----- ----- ---- ----- ---- ----- ----- ----- ---- ---- 
 """ # another linear search code:
 def linear_search(arr,n,t):
@@ -33,20 +35,22 @@ def linear_search(arr,n,t):
   #we give l as th left most value as 0 of the index
   # r is the right most value in the list but because the indexing is from 0  and the list length does not start from 0 so teo
   # even out the end value to match the indexing value which is n+1 we sub 1 from the right most value to match the index value
-def binary_search(arr , target):
+def getPosition(list, item):
+  return [(i, sublist.index(item)) for i, sublist in enumerate(list)]
+def binary_search(target,array):
   l=0
-  r=arr.length-1 
+  r=array.length-1 
   #len(arr)-1
  # for the binary search we go to the middle most value of the list to check if target is there
   while l<=r: m=(l+r)/2
  # if that is the target we use its value as the output of the function
-  if arr[m]==target: return m
+  if array[m]==target: return m
  #otherwise
 # L--------M---------R# L<-----(T<M)---->M<------(T>M)---->R
-  if target<arr[m]:r=m-1
+  if target<array[m]:r=m-1
     #L<------>r-M______R
   else: l=m+1    #L_____M-l<----->R
-  return -1
+  return  getPosition(target)
 #IF NONE THEN RETURN
 #----------------------------------------------------------------------------------------------------------------------------------------------------------------
 def selection_sort(array, size):
@@ -173,22 +177,22 @@ queryentry.grid(row=6, column=3)
 
 #Radio & Packing
 
-backspace_button =Button(window,text='BACKSPACE',command = backspace,bg ="#F2E9EB",fg="#647295")
+backspace_button =Button(window,text='BACKSPACE',command =backspace,bg ="#F2E9EB",fg="#647295")
 backspace_button.grid( row=1, column=4)
 
-delete_button =Button(window,text='DELETE',command = delete, bg ="#F2E9EB",fg="#647295")
+delete_button =Button(window,text='DELETE',command =delete , bg ="#F2E9EB",fg="#647295")
 delete_button.grid( row=1, column=5)
 
-submit_button =Button(window,text='SUBMIT',command = submit, bg ="#F2E9EB",fg="#647295")
+submit_button =Button(window,text="SUBMIT",command =submit , bg ="#F2E9EB",fg="#647295")
 submit_button.grid(row=1, column=6)
 
-delete_exit_button =Button(window,text='DELETE',command = delete_exit, bg ="#F2E9EB",fg="#647295")
-delete_exit_button.grid( row=6, column=4)
+delete_exit_button =Button(window,text='DELETE',command =delete_exit , bg ="#F2E9EB",fg="#647295")
+delete_exit_button.grid( row=5, column=4)
 
-delete_query_button =Button(window,text='DELETE',command = delete_query, bg ="#F2E9EB",fg="#647295")
-delete_query_button.grid( row=5, column=4)
+delete_query_button =Button(window,text='DELETE',command =delete_query , bg ="#F2E9EB",fg="#647295")
+delete_query_button.grid( row=6, column=4)
 
-query_button =Button(window,text='RUN QUERY',command = submit_query, bg ="#F2E9EB",fg="#647295")
+query_button =Button(window,text='RUN QUERY',command =submit_query , bg ="#F2E9EB",fg="#647295")
 query_button.grid(row=5, column=5)
 # --------------------
 # ------------------------------------------------------------------------------------------------------------------------
