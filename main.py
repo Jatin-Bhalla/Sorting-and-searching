@@ -8,7 +8,7 @@ def submit():
   array = [int(item) for item in val.split()]
   return array
 def submit_query():
-  =query.get
+  target=queryentry.get
 def delete():inpttentry.delete(0,END)
 def backspace():inpttentry.delete(len(inpttentry.get())-1 ,END)
 def delete_exit():outpttentry.delete(0,END)
